@@ -12,7 +12,17 @@ namespace Promedio1facil
         int b;
         int h;
         int days;
-        bool Week;
+        int angle1;
+        int angle2;
+        public Variables(float radio, int b, int h,int days, int angle1, int angle2)
+        {
+           this.radio = radio;
+           this.b = b;
+           this.h = h;
+           this.days = days;
+           this.angle1 = angle1;
+           this.angle2 = angle2;
+        }
         private float Circle()
         {
             float pi = 3.14f;
@@ -34,9 +44,14 @@ namespace Promedio1facil
             int years = days / 365;
             return years;
         }
+        private int AngleTriangle()
+        {
+            int angle3 = angle1 - angle2;
+            return angle3;
+        }
         public string GetData()
         {
-            return $"{Circle()} - {Triangle()} - {DaysToWeeks()} - {DaysToYears()}";
+            return $"{Circle()} - {Triangle()} - {DaysToWeeks()} - {DaysToYears()} - {AngleTriangle()}";
         }
     }
 }
