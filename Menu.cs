@@ -33,7 +33,7 @@ namespace Promedio1facil
                         loop = false;
                         break;
                     case 1:
-
+                        Variable();
                         break;
                     case 2:
 
@@ -74,7 +74,7 @@ namespace Promedio1facil
                     Ejercicio1();
                     break;
                 case 2:
-
+                    Ejercicio2();
                     break;
                 case 3:
 
@@ -100,6 +100,27 @@ namespace Promedio1facil
 
             Circulo circulo = new Circulo(option);
             Console.WriteLine($"el perimetro es {circulo.GetData()}");
+
+        }
+        private void Ejercicio2() 
+        {
+            int b;
+            int h;
+            Console.WriteLine("Area del triángulo");
+            Console.WriteLine("Ponga la base del triángulo");
+            b = int.Parse(Console.ReadLine());
+            Console.WriteLine("Ahora la altura del triángulo");
+            h = int.Parse(Console.ReadLine());
+
+            AreaTriangulo area = new AreaTriangulo(b, h);
+            Console.WriteLine($"El área del triángulo es {area.GetData()}");
+        }
+        private void Ejercicio3()
+        {
+            int days;
+            Console.WriteLine("Diga el número de días");
+            days = int.Parse(Console.ReadLine());
+            Dias dias = new Dias(days);
 
         }
     }

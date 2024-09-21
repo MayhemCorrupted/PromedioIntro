@@ -8,11 +8,10 @@ namespace Promedio1facil
 {
     internal class Dias
     {
-        int days;
-
+        int days;       
         public Dias(int days)
         {
-            this.days = days;
+            this.days = days;           
         }
 
         private int DaysToWeeks()
@@ -27,8 +26,8 @@ namespace Promedio1facil
         }
 
         public string GetData()
-        {
-            return $"{DaysToWeeks()} - {DaysToYears()}";
+        {            
+            return $"Semanas: {DaysToWeeks()}, años: {DaysToYears()}";
         }
     }
 }
