@@ -11,6 +11,8 @@ namespace Promedio1facil
         float radio;
         int b;
         int h;
+        int days;
+        bool Week;
         private float Circle()
         {
             float pi = 3.14f;
@@ -21,6 +23,16 @@ namespace Promedio1facil
         {
             int area = (b * h) / 2;
             return area;
+        }
+        private int DaysToWeeks()
+        {            
+            int weeks = days / 7;            
+            return weeks;            
+        }
+        private int DaysToYears()
+        {
+            int years = days / 365;
+            return years;
         }
         public string GetData()
         {
