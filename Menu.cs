@@ -246,6 +246,34 @@ namespace Promedio1facil
             if (lado1 + lado2 > lado3 && lado1 + lado3 > lado2 && lado2 + lado3 > lado1) Console.WriteLine("Es un triangulo");
             else Console.WriteLine("No es triangulo");
         }
+        private void Ejercicio10()
+        {
+            int number;
+            Console.WriteLine("Escribe un número para saber si es impar");
+            number = int.Parse(Console.ReadLine());
+
+            if (number % 2 == 0) Console.WriteLine("Es par");
+            else Console.WriteLine("No es par");
+
+        }
+        private void Ejercicio11()
+        {
+            int dia;
+            Console.WriteLine("Escribe un dia en número");
+            dia = int.Parse(Console.ReadLine());
+
+            switch (dia)
+            {
+               case 1: Console.WriteLine("Lunes"); break;
+               case 2: Console.WriteLine("Martes"); break;
+               case 3: Console.WriteLine("Miercoles"); break;
+               case 4: Console.WriteLine("Jueves"); break;
+               case 5: Console.WriteLine("Viernes"); break;
+               case 6: Console.WriteLine("Sabado"); break;
+               case 7: Console.WriteLine("Domingo"); break;
+               default: Console.WriteLine("Valor incorrecto"); break;
+            }
+        }
         #endregion
     }
 }
