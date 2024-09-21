@@ -55,7 +55,6 @@ namespace Promedio1facil
         }
         private void Variable()
         {
-            Variables variables = new Variables();
             int option;
             Console.WriteLine("Elija la opción");
             Console.WriteLine("1. Perímetro de un circulo");
@@ -72,7 +71,7 @@ namespace Promedio1facil
                     Panel();
                     break;
                 case 1:
-                    
+                    Ejercicio1();
                     break;
                 case 2:
 
@@ -91,6 +90,16 @@ namespace Promedio1facil
                     Variable();
                     break;
             }
+
+        }
+        private void Ejercicio1()
+        {
+            float option;
+            Console.WriteLine("Escribe el radio para calcular el perimetro");
+            option = float.Parse(Console.ReadLine());
+
+            Circulo circulo = new Circulo(option);
+            Console.WriteLine($"el perimetro es {circulo.GetData()}");
 
         }
     }
