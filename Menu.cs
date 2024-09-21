@@ -331,7 +331,7 @@ namespace Promedio1facil
         {
             int valor;
             int impar = 0;
-            Console.WriteLine("Escribe el número para sumarlo consecutivamente");
+            Console.WriteLine("Escribe el número para sumar sus impares consecutivamente");
             valor = int.Parse(Console.ReadLine());
 
             while (impar < valor)
@@ -420,7 +420,7 @@ namespace Promedio1facil
                 int temp = a + b;
                 a = b;
                 b = temp;
-                Console.WriteLine($"{a} + {b} = {temp}");
+                Console.WriteLine($"{temp}");
             }
         }
         #endregion
