@@ -68,7 +68,7 @@ namespace Promedio1facil
             switch (option)
             {
                 case 0:
-                    Panel();
+                    Console.WriteLine("Retrocediendo. . .");                 
                     break;
                 case 1:
                     Ejercicio1();
@@ -77,17 +77,16 @@ namespace Promedio1facil
                     Ejercicio2();
                     break;
                 case 3:
-
+                    Ejercicio3();
                     break;
                 case 4:
-
+                    Ejercicio4();
                     break;
                 case 5:
-
+                    Ejercicio5();
                     break;
                 default:
                     Console.WriteLine("xd");
-                    Variable();
                     break;
             }
 
@@ -120,7 +119,41 @@ namespace Promedio1facil
             int days;
             Console.WriteLine("Diga el número de días");
             days = int.Parse(Console.ReadLine());
+
             Dias dias = new Dias(days);
+            Console.WriteLine(dias.GetData());
+        }
+        private void Ejercicio4()
+        {
+            int angle1;
+            int angle2;
+            Console.WriteLine("Escribe un ángulo");
+            angle1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Ahora el otro ángulo");
+            angle2 = int.Parse(Console.ReadLine());
+
+            DeterminarTriangulo angulo = new DeterminarTriangulo(angle1, angle2);
+
+            if (angle1 + angle2 < 180) Console.WriteLine($" el tercer ángulo es {angulo.GetData()}");
+            else Console.WriteLine("No es un triángulo");
+
+        }
+        private void Ejercicio5()
+        {
+            int nota1;
+            int nota2;
+            int nota3;
+
+            Console.WriteLine("Escribe tu primera nota");
+            nota1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Ahora tu segunda nota");
+            nota2 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Y por ultimo tu tercera nota");
+            nota3 = int.Parse(Console.ReadLine());
+
+            NotaTLS promedio = new NotaTLS(nota1, nota2, nota3);
+            
+            Console.WriteLine($"Tu promedio es {promedio.GetData()}");
 
         }
     }
