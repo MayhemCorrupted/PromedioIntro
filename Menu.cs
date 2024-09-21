@@ -222,6 +222,16 @@ namespace Promedio1facil
             }
             else Console.WriteLine("No es bisiesto");
         }
+        private void Ejercicio8()
+        {
+            int mes;
+            Console.WriteLine("Ponga el mes");
+            mes = int.Parse(Console.ReadLine());
+
+            if (mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12) Console.WriteLine("Tiene 31 dias");
+            else if (mes == 4 || mes == 6 || mes == 9 || mes == 11) Console.WriteLine($"Tiene 30 dias");
+            else if (mes == 2) Console.WriteLine("Tiene 28 o 29 dias (depende si es bisiesto)");
+        }
         #endregion
     }
 }
