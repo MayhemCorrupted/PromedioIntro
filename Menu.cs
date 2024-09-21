@@ -69,7 +69,7 @@ namespace Promedio1facil
             switch (option)
             {
                 case 0:
-                    Console.WriteLine("Retrocediendo. . .");                 
+                    Console.WriteLine("Retrocediendo. . .");
                     break;
                 case 1:
                     Ejercicio1();
@@ -136,7 +136,7 @@ namespace Promedio1facil
             Console.WriteLine($"el perimetro es {circulo.GetData()}");
 
         }
-        private void Ejercicio2() 
+        private void Ejercicio2()
         {
             int b;
             int h;
@@ -203,6 +203,24 @@ namespace Promedio1facil
             else if (valor % 6 != 0 && valor % 9 == 0) Console.WriteLine($"{valor} es divisible no es divisible entre 6 pero si con 9");
             else Console.WriteLine("No es divisible entre 6 y 9");
 
+        }
+        private void Ejercicio7()
+        {
+            int valor;
+            Console.WriteLine("escribe el año para saber si es bisiesto");
+            valor = int.Parse(Console.ReadLine());
+
+            if (valor % 4 == 0)
+            {
+                if (valor % 100 == 0)
+                {
+                    if (valor % 400 == 0) Console.WriteLine("Es bisiesto");
+
+                    else Console.WriteLine("No es bisiesto");                    
+                }
+                else Console.WriteLine("No es bisiesto");                
+            }
+            else Console.WriteLine("No es bisiesto");
         }
         #endregion
     }
