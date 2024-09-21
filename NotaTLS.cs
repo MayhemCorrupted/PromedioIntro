@@ -22,7 +22,8 @@ namespace Promedio1facil
         {
             int promedio = (nota1 + nota2 + (nota3 * 2)) / 4;
             return promedio;           
-        }       
+        }
+        
         public string GetData()
         {
             return $"{TLSscore()}";

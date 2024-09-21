@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="AreaTriangulo.cs" />
     <Compile Include="Circulo.cs" />
+    <Compile Include="Divisible.cs" />
     <Compile Include="DeterminarTriangulo.cs" />
     <Compile Include="Dias.cs" />
     <Compile Include="Menu.cs" />

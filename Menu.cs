@@ -36,7 +36,7 @@ namespace Promedio1facil
                         Variable();
                         break;
                     case 2:
-
+                        Condiciones();
                         break;
                     case 3:
 
@@ -53,6 +53,7 @@ namespace Promedio1facil
                 }
             }
         }
+        #region Bloques
         private void Variable()
         {
             int option;
@@ -91,6 +92,40 @@ namespace Promedio1facil
             }
 
         }
+        private void Condiciones()
+        {
+            int option;
+            Console.WriteLine("Elija que ejercicios");
+            Console.WriteLine("1. Divisible entre 6 y/o 9");
+            Console.WriteLine("2. Año bisiesto");
+            Console.WriteLine("3. Dias de mes");
+            Console.WriteLine("4. Lados de triangulo");
+            Console.WriteLine("5. Par o impar");
+            option = int.Parse(Console.ReadLine());
+
+            switch (option)
+            {
+                case 1:
+                    Ejercicio6();
+                    break;
+                case 2:
+
+                    break;
+                case 3:
+
+                    break;
+                case 4:
+
+                    break;
+                case 5:
+
+                    break;
+                default: Console.WriteLine("Xd");
+                    break;
+            }
+        }
+        #endregion
+        #region Ejercicios
         private void Ejercicio1()
         {
             float option;
@@ -151,10 +186,24 @@ namespace Promedio1facil
             Console.WriteLine("Y por ultimo tu tercera nota");
             nota3 = int.Parse(Console.ReadLine());
 
+            int prom = (nota1 + nota2 + (nota3 * 2)) / 4;
             NotaTLS promedio = new NotaTLS(nota1, nota2, nota3);
-            
-            Console.WriteLine($"Tu promedio es {promedio.GetData()}");
+
+            if (prom <= 20) Console.WriteLine($"Tu promedio es {promedio.GetData()}");
+            else Console.WriteLine("TU promedio es 20");
+        }
+        private void Ejercicio6()
+        {
+            int valor;
+            Console.WriteLine("Ponga un valor para saber si es divisible entre 6 y/o 9");
+            valor = int.Parse(Console.ReadLine());
+
+            if (valor % 6 == 0 && valor % 9 == 0) Console.WriteLine($"{valor} es divisible entre 6 y 9");
+            else if (valor % 6 == 0 && valor % 9 != 0) Console.WriteLine($"{valor} es divisible entre 6 pero no con 9");
+            else if (valor % 6 != 0 && valor % 9 == 0) Console.WriteLine($"{valor} es divisible no es divisible entre 6 pero si con 9");
+            else Console.WriteLine("No es divisible entre 6 y 9");
 
         }
+        #endregion
     }
 }
