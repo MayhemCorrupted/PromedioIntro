@@ -232,6 +232,20 @@ namespace Promedio1facil
             else if (mes == 4 || mes == 6 || mes == 9 || mes == 11) Console.WriteLine($"Tiene 30 dias");
             else if (mes == 2) Console.WriteLine("Tiene 28 o 29 dias (depende si es bisiesto)");
         }
+        private void Ejercicios9()
+        {
+            int lado1;
+            int lado2;
+            int lado3;
+            Console.WriteLine("Escriba el primer lado");
+            lado1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Escriba el segundo lado");
+            lado2 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Escriba el tercer lado");
+            lado3 = int.Parse(Console.ReadLine());
+            if (lado1 + lado2 > lado3 && lado1 + lado3 > lado2 && lado2 + lado3 > lado1) Console.WriteLine("Es un triangulo");
+            else Console.WriteLine("No es triangulo");
+        }
         #endregion
     }
 }
