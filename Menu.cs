@@ -1,8 +1,11 @@
 ﻿using System;
+using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization.Formatters;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 
 namespace Promedio1facil
 {
@@ -21,7 +24,7 @@ namespace Promedio1facil
                 Console.WriteLine("Elija que bloques quiere ver");
                 Console.WriteLine("1. Variables");
                 Console.WriteLine("2. If");
-                Console.WriteLine("3. Switch");
+                Console.WriteLine("3. Switch (xd)");
                 Console.WriteLine("4. While");
                 Console.WriteLine("5. For");
                 Console.WriteLine("0. Salir");
@@ -39,13 +42,13 @@ namespace Promedio1facil
                         Condiciones();
                         break;
                     case 3:
-
+                        Console.WriteLine("Xd");
                         break;
                     case 4:
-
+                        Bloque4();
                         break;
                     case 5:
-
+                        Bloque5();
                         break;
                     default:
                         Console.WriteLine("Valor incorrecto, elija una opción correcta :v");
@@ -109,18 +112,71 @@ namespace Promedio1facil
                     Ejercicio6();
                     break;
                 case 2:
-
+                    Ejercicio7();
                     break;
                 case 3:
-
+                    Ejercicio8();
                     break;
                 case 4:
-
+                    Ejercicios9();
                     break;
                 case 5:
-
+                    Ejercicio10();
                     break;
                 default: Console.WriteLine("Xd");
+                    break;
+            }
+        }
+        private void Bloque4()
+        {
+            int option;
+            Console.WriteLine("Elija el ejercicio");
+            Console.WriteLine("1. Tabla de multiplicar");
+            Console.WriteLine("2. Suma de número impares");
+            Console.WriteLine("3. Cantidad de digitos");
+            Console.WriteLine("4. Cantidad de digitos");
+            option = int.Parse(Console.ReadLine());
+
+            switch(option)
+            {
+                case 1:
+                    Ejercicio15();
+                    break;
+                case 2:
+                    Ejercicio16();
+                    break;
+                case 3:
+                    Ejercicio17();
+                    break;
+                case 4:
+                    Ejercicio18();
+                    break;
+                default:
+                    Console.WriteLine("xd");
+                    break;
+            }
+        }
+        private void Bloque5()
+        {
+            int option;
+            Console.WriteLine("Elija un ejercicio");
+            Console.WriteLine("1. Resta de los números del -1 al -n");
+            Console.WriteLine("2. Factorial");
+            Console.WriteLine("3. Serie Fibonacci (fetucinni)");
+            option = int.Parse(Console.ReadLine());
+            switch (option)
+            {
+                case 1:
+                    Ejercicio19();
+                    break;
+                case 2:
+                    Ejercicio20();
+                    break;
+                case 3:
+                    Ejercicio21();
+                    break;
+                default:
+                    Console.WriteLine("xd");
                     break;
             }
         }
@@ -256,22 +312,114 @@ namespace Promedio1facil
             else Console.WriteLine("No es par");
 
         }
-        private void Ejercicio11()
+       
+        private void Ejercicio15()
         {
-            int dia;
-            Console.WriteLine("Escribe un dia en número");
-            dia = int.Parse(Console.ReadLine());
+            int valor;
+            int multiplo = 0;
+            Console.WriteLine("Escriba el número que quiere saber la multiplicación");
+            valor = int.Parse(Console.ReadLine());
 
-            switch (dia)
+            while (multiplo < 12)
             {
-               case 1: Console.WriteLine("Lunes"); break;
-               case 2: Console.WriteLine("Martes"); break;
-               case 3: Console.WriteLine("Miercoles"); break;
-               case 4: Console.WriteLine("Jueves"); break;
-               case 5: Console.WriteLine("Viernes"); break;
-               case 6: Console.WriteLine("Sabado"); break;
-               case 7: Console.WriteLine("Domingo"); break;
-               default: Console.WriteLine("Valor incorrecto"); break;
+                int temp = valor * multiplo;
+                multiplo++;
+                Console.WriteLine($"{valor} * {multiplo} = {temp}");
+            }
+        }
+        private void Ejercicio16()
+        {
+            int valor;
+            int impar = 0;
+            Console.WriteLine("Escribe el número para sumarlo consecutivamente");
+            valor = int.Parse(Console.ReadLine());
+
+            while (impar < valor)
+            {
+                int temp = 0;
+                temp++;
+
+                if (temp % 2 != 0)                   
+                {
+                    impar += temp;
+                }
+                
+            }
+            Console.WriteLine($"{impar}");
+        }
+        private void Ejercicio17()
+        {
+            int valor;
+            int contar = 0;
+
+            Console.WriteLine("Escribe un valor para contarlo");
+            valor = int.Parse(Console.ReadLine());
+
+            while (0 < valor)
+            {                
+                valor /= 10;
+                contar++;
+                
+            }
+            Console.WriteLine($"{valor} tiene {contar} digito/s");
+        }
+        private void Ejercicio18()
+        {
+            int valor;
+            int contar = 0;
+
+            Console.WriteLine("Escribe un valor para contarlo");
+            valor = int.Parse (Console.ReadLine());
+
+            while (0 < valor)
+            {
+                valor /= 10;
+                if(valor % 2 == 0) contar++;
+            }
+        }
+        private void Ejercicio19()
+        {
+            int valor;
+            int resta;
+
+            Console.WriteLine("Escribe un valor negativo");
+            valor = int.Parse(Console.ReadLine());
+
+            for (int i = -1; valor <= i; i--)
+            {
+                resta = i;                
+                Console.WriteLine($"{resta}");
+            }
+        }
+        private void Ejercicio20()
+        {
+            int valor;
+            int factorial = 1;
+
+            Console.WriteLine("Escribe el valor para sacar factorial");
+            valor = int.Parse(Console.ReadLine());
+
+            for (int i = 1; i <= valor; i++)
+            {
+                factorial *= i;
+            }
+            Console.WriteLine($"el factorial de {valor} es {factorial}");
+        }
+        private void Ejercicio21()
+        {
+            int valor;
+            int a = 0;
+            int b = 1;
+            Console.WriteLine("Escriba un número para la serie fibonacci");
+            valor = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Serie fibonacci: ");
+            for (int i = 0; i <= valor; i++)
+            {
+                int temp = a + b;
+                a = b;
+                b = temp;
+                Console.WriteLine($"{a} + {b} = {temp}");
             }
         }
         #endregion
