@@ -134,7 +134,7 @@ namespace Promedio1facil
             Console.WriteLine("1. Tabla de multiplicar");
             Console.WriteLine("2. Suma de número impares");
             Console.WriteLine("3. Cantidad de digitos");
-            Console.WriteLine("4. Cantidad de digitos");
+            Console.WriteLine("4. Cantidad de digitos pares");
             option = int.Parse(Console.ReadLine());
 
             switch(option)
@@ -361,14 +361,14 @@ namespace Promedio1facil
                 contar++;
                 
             }
-            Console.WriteLine($"{valor} tiene {contar} digito/s");
+            Console.WriteLine($"el valor tiene {contar} digito/s");
         }
         private void Ejercicio18()
         {
             int valor;
             int contar = 0;
 
-            Console.WriteLine("Escribe un valor para contarlo");
+            Console.WriteLine("Escribe un valor para contarlo si son pares");
             valor = int.Parse (Console.ReadLine());
 
             while (0 < valor)
@@ -376,18 +376,19 @@ namespace Promedio1facil
                 valor /= 10;
                 if(valor % 2 == 0) contar++;
             }
+            Console.WriteLine($"El valor tiene {contar} digito/s pares");
         }
         private void Ejercicio19()
         {
             int valor;
-            int resta;
+            int resta = 0;
 
             Console.WriteLine("Escribe un valor negativo");
             valor = int.Parse(Console.ReadLine());
 
             for (int i = -1; valor <= i; i--)
             {
-                resta = i;                
+                resta -= i;                
                 Console.WriteLine($"{resta}");
             }
         }
