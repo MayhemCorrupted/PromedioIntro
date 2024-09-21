@@ -36,7 +36,7 @@ namespace Promedio1facil
         }
         public string GetData()
         {
-            return $"{Circle()} - {Triangle()}";
+            return $"{Circle()} - {Triangle()} - {DaysToWeeks()} - {DaysToYears()}";
         }
     }
 }
