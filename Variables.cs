@@ -6,12 +6,7 @@ using System.Threading.Tasks;
 
 namespace Promedio1facil
 {
-    internal class Program
+    internal class Variables
     {
-        static void Main(string[] args)
-        {
-            Menu menu = new Menu();
-            menu.ExecuteCode();
-        }
     }
 }
